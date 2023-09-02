@@ -57,7 +57,7 @@ const HomePage = () => {
           <h1>#add to cart</h1>
           <p>"Unlock Knowledge, Expand Your Mind - Buying Books is Investing in Your Intellect."</p>
       </PageHeader>
-      <Loading isLoading={isLoading || loading}>
+    <Loading isLoading={isLoading || loading}>
       <div style={{ margin: '50px 0 0 70px', }}>
         <WrapperTypeProduct>
           {typeProducts.map((item) => {

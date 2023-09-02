@@ -20,8 +20,8 @@ export const WrapperCardStyle = styled(Card)`
 
 export const StyleNameProduct = styled.div`
     color:#212121;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size:14px;
+    font-family: Caslon Bold;
+    font-size:16px;
     font-weight:500;
     letter-spacing:1px;
     line-height:19.25px;
@@ -31,10 +31,10 @@ export const StyleNameProduct = styled.div`
 `
 
 export const WrapperPriceText = styled.div`
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: News Gothic No 2;
     color:#212121;
-    font-size:12px;
-    font-weight:500;
+    font-size:14px;
+    font-weight:400;
     letter-spacing:1px;
     line-height:16.5px;
     text-align:center;
