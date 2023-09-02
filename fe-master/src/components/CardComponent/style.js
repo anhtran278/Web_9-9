@@ -6,12 +6,16 @@ import styled from "styled-components";
 export const WrapperCardStyle = styled(Card)`
     width: 568px;
     margin: 5px;
+    position: relative;
+    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
     & img {
         height: 709px;
         width: 568px;
     },
-    position: relative;
-    cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'}
+    &:hover {
+    background-image: url(${props => props.hoverImage || ''});
+    }
+    
 `
 
 export const StyleNameProduct = styled.div`

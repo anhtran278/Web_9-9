@@ -80,7 +80,7 @@ const ProfilePage = () => {
     }
     return (
         <div style={{ width: '1270px', margin: '0 auto', height: '500px' }}>
-            <WrapperHeader>Thông tin người dùng</WrapperHeader>
+            <WrapperHeader>User information</WrapperHeader>
             <Loading isLoading={isLoading}>
                 <WrapperContentProfile>
                     <WrapperInput>
@@ -95,7 +95,7 @@ const ProfilePage = () => {
                                 borderRadius: '4px',
                                 padding: '2px 6px 6px'
                             }}
-                            textbutton={'Cập nhật'}
+                            textbutton={'Update'}
                             styleTextButton={{ color: 'rgb(26, 148, 255)', fontSize: '15px', fontWeight: '700' }}
                         ></ButtonComponent>
                     </WrapperInput>
@@ -111,7 +111,7 @@ const ProfilePage = () => {
                                 borderRadius: '4px',
                                 padding: '2px 6px 6px'
                             }}
-                            textbutton={'Cập nhật'}
+                            textbutton={'Update'}
                             styleTextButton={{ color: 'rgb(26, 148, 255)', fontSize: '15px', fontWeight: '700' }}
                         ></ButtonComponent>
                     </WrapperInput>
@@ -127,7 +127,7 @@ const ProfilePage = () => {
                                 borderRadius: '4px',
                                 padding: '2px 6px 6px'
                             }}
-                            textbutton={'Cập nhật'}
+                            textbutton={'Update'}
                             styleTextButton={{ color: 'rgb(26, 148, 255)', fontSize: '15px', fontWeight: '700' }}
                         ></ButtonComponent>
                     </WrapperInput>
@@ -154,7 +154,7 @@ const ProfilePage = () => {
                                 borderRadius: '4px',
                                 padding: '2px 6px 6px'
                             }}
-                            textbutton={'Cập nhật'}
+                            textbutton={'Update'}
                             styleTextButton={{ color: 'rgb(26, 148, 255)', fontSize: '15px', fontWeight: '700' }}
                         ></ButtonComponent>
                     </WrapperInput>
@@ -170,7 +170,7 @@ const ProfilePage = () => {
                                 borderRadius: '4px',
                                 padding: '2px 6px 6px'
                             }}
-                            textbutton={'Cập nhật'}
+                            textbutton={'Update'}
                             styleTextButton={{ color: 'rgb(26, 148, 255)', fontSize: '15px', fontWeight: '700' }}
                         ></ButtonComponent>
                     </WrapperInput>

@@ -3,8 +3,11 @@ import styled from "styled-components";
 
 export const WrapperHeader = styled.h1`
     color: #000;
-    font-size: 18px;
-    margin: 4px 0;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 40px 0 20px 0;
+    position: relative;
+    left: 500px;
 `
 export const WrapperContentProfile = styled.div`
     display: flex;

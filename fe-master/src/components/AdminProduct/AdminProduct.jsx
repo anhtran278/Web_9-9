@@ -466,7 +466,7 @@ const AdminProduct = () => {
 
   return (
     <div>
-      <WrapperHeader>Quản lý sản phẩm</WrapperHeader>
+      <WrapperHeader>Product Management</WrapperHeader>
       <div style={{ marginTop: '10px' }}>
         <Button style={{ height: '150px', width: '150px', borderRadius: '6px', borderStyle: 'dashed' }} onClick={() => setIsModalOpen(true)}><PlusOutlined style={{ fontSize: '60px' }} /></Button>
       </div>

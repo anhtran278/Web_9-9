@@ -1,78 +1,91 @@
 import { Col, Image, InputNumber } from "antd";
 import styled from "styled-components";
 
-export const WrapperStyleImageSmall = styled(Image)`
-    height: 64px;
-    width: 64px;
-`
-
-export const WrapperStyleColImage = styled(Col)`
-    flex-basis: unset;
+export const Article = styled.article`
     display: flex;
+    justify-content: space-around;
+    width: 100%;
 `
 
-export const WrapperStyleNameProduct = styled.h1`
-    color: rgb(36, 36, 36);
-    font-size: 24px;
-    font-weight: 300;
-    line-height: 32px;
-    word-break: break-word;
-`
+export const Section1 = styled.section`
+    margin: 50px 20px 0 -40px;
+    border-top: 1px solid;
+    width: 20%;
+    h1{
+    font-family: Caslon Bold;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 100;
+    width: 100%;
+    margin-top: 25px;
+    }       
+    h2{
+    font-family: Caslon Bold;
+    font-size: 25px;
+    font-weight:400;
+    line-height: 30px;
+    margin: 0px 0 10px 0;
+    }
+    h3{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 100;
+    font-size: 16px;
+    width: 70%;
+    margin: 0;
+    }
+    .small-img{
+    width: 100%;
+    margin-top: 30px;
+    }
+    .small-img img{
+    width: 30%;
+    margin: 2px 2px;
+    cursor: pointer;
+    }
+    .bt input{
+        margin: 6px 0;
+        padding: 11px 0;
+        width: 17%;
+    }
+    .bt button{
+        padding: 10px 0;
+        width: 50%;
+        padding: 12px 0;
+        font-size: 12px;
+        margin-left: 20px;
+        outline: none;
+        background-color: #021d49;
+        color: #FFFFFF;
+    }
 
-export const WrapperStyleTextSell = styled.span`
-    font-size: 15px;
-    line-height: 24px;
-    color: rgb(120, 120, 120)
-`
-
-export const WrapperPriceProduct = styled.div`
-    background: rgb(250, 250, 250);
-    border-radius: 4px;
-`
-
-export const WrapperPriceTextProduct = styled.h1`
-    font-size: 32px;
-    line-height: 40px;
-    margin-right: 8px;
-    font-weight: 500;
-    padding: 10px;
-    margin-top: 10px;
-`
-
-export const WrapperAddressProduct = styled.div`
-    span.address {
-        text-decoration: underline;
+    .bt h4{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         font-size: 15px;
-        line-height: 24px;
-        font-weight: 500;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsisl
-    };
-    span.change-address {
-        color: rgb(11, 116, 229);
-        font-size: 16px;
-        line-height: 24px;
-        font-weight: 500;
+        font-weight: 200;
     }
 `
 
-export const WrapperQualityProduct = styled.div`
-    display: flex;
-    gap: 4px;
-    align-items: center;
-    width: 120px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+export const Section2 = styled.section`
+    width: 48%;
+    margin-top: 50px;
+
+    img{
+    width: 100%;
+    margin-top: 30px;
+    }
 `
 
-export const WrapperInputNumber = styled(InputNumber)`
-    &.ant-input-number.ant-input-number-sm {
-        width: 40px;
-        border-top: none;
-        border-bottom: none;
-        .ant-input-number-handler-wrap {
-            display: none !important;
-        }
-    };
+export const Section3 = styled.section`
+    margin: 50px -35px 0 0px;
+    width: 20%;
+    border-top: 1px solid;
+    div{
+    font-family: 'News Cycle', sans-serif;
+    font-size: 17px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 25px;
+    }
+
 `

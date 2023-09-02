@@ -7,6 +7,7 @@ import { convertPrice } from '../../utils'
 
 
 const CardComponent = (props) => {
+    
     const { countInStock, description, image, name, price, rating, type, discount, selled, id } = props
     const navigate = useNavigate()
     const handleDetailsProduct = (id) => {
@@ -16,6 +17,7 @@ const CardComponent = (props) => {
         <WrapperCardStyle
             hoverable
             cover={<img alt="example" src={image} />}
+            hoverImage={props.hoverImage}
             onClick={() =>  handleDetailsProduct(id)}
         >
             <StyleNameProduct>{name}</StyleNameProduct>
