@@ -48,7 +48,7 @@ const ContactPage = () => {
                 </div>
             </div>
             <div className="map">
-            <iframe title='Google Maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1496.423964936815!2d106.69950958115241!3d10.827476794341276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f4a62fce9b%3A0xc99902aa1e26ef02!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIExhbmc!5e0!3m2!1svi!2s!4v1693379867129!5m2!1svi!2s" style={{border: '0',borderRadius:'10px',width:"600", height:"450"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title='Google Maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1496.423964936815!2d106.69950958115241!3d10.827476794341276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528f4a62fce9b%3A0xc99902aa1e26ef02!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBWxINuIExhbmc!5e0!3m2!1svi!2s!4v1693379867129!5m2!1svi!2s" style={{border: '0',width:"600", height:"450"}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
         <section id="form_details">

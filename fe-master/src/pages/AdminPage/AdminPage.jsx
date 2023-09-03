@@ -1,8 +1,7 @@
 import { Menu } from 'antd'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { getItem } from '../../utils';
 import { UserOutlined, AppstoreOutlined, ShoppingCartOutlined } from '@ant-design/icons'
-import HeaderComponent from '../../components/HeaderCompoent/HeaderComponent';
 import AdminUser from '../../components/AdminUser/AdminUser';
 import AdminProduct from '../../components/AdminProduct/AdminProduct';
 import OrderAdmin from '../../components/OrderAdmin/OrderAmin';
@@ -65,9 +64,9 @@ const AdminPage = () => {
     }
   },[queries])
   const COLORS = {
-   users: ['#e66465', '#9198e5'],
-   products: ['#a8c0ff', '#3f2b96'],
-   orders: ['#11998e', '#38ef7d'],
+  users: ['#e66465', '#9198e5'],
+  products: ['#a8c0ff', '#3f2b96'],
+  orders: ['#11998e', '#38ef7d'],
   };
 
   const renderPage = (key) => {
@@ -95,8 +94,8 @@ const AdminPage = () => {
   console.log('memoCount', memoCount)
   return (
     <>
-      <HeaderComponent isHiddenSearch isHiddenCart />
-      <div style={{ display: 'flex',overflowX: 'hidden' }}>
+      {/* <HeaderComponent isHiddenSearch isHiddenCart /> */}
+      <div style={{ display: 'flex',overflowX: 'hidden', margin: '20px 90px' }}>
         <Menu
           mode="inline"
           style={{
