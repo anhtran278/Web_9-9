@@ -11,14 +11,16 @@ export const Main = styled.div`
     width: 1000px;
     min-width: 1000px;
     min-height: 600px;
-    height: 600px;
+    height: auto;
     padding: 25px;
     border-radius: 10px;
     overflow: hidden;
     display: block;
     margin: 150px auto;
     display: block;
-
+    div::-webkit-scrollbar {
+    display: none; 
+    }   
     .title {
     font-size: 34px;
     font-weight: 700;
