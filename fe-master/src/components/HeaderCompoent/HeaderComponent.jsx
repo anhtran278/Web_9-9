@@ -47,6 +47,10 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
   const handleNavigateSignUP = () => {
     navigate('/sign-up');
   };
+   
+  const handleNavigateHome = () => {
+    navigate('/');
+  };
 
   const handleLogout = async () => {
     setLoading(true);
@@ -70,7 +74,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
         <WrapperContentPopup onClick={() => handleClickNavigate('admin')}>System Management</WrapperContentPopup>
       )}
       <WrapperContentPopup onClick={() => handleClickNavigate('my-order')}>My Order</WrapperContentPopup>
-      <WrapperContentPopup onClick={handleLogout}>Log Out</WrapperContentPopup>
+      <WrapperContentPopup onClick={handleLogout}  >Log Out</WrapperContentPopup>
     </div>
   );
 

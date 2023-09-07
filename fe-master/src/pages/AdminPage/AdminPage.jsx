@@ -98,6 +98,7 @@ const AdminPage = () => {
       {/* <HeaderComponent isHiddenSearch isHiddenCart /> */}
       <Admin style={{ display: 'flex',overflowX: 'hidden', margin: '20px 90px' }}>
         <Menu
+          className='menu'
           mode="inline"
           style={{
             width: 256,

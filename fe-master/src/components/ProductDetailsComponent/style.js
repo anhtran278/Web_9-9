@@ -6,6 +6,11 @@ export const Article = styled.article`
     width: 100%;
     @media screen and (max-width: 769px) {
         justify-content: space-between;
+        padding-bottom: 100px;
+        border-bottom: 1px solid grey;
+    }
+    @media screen and (max-width: 379px) {
+        flex-direction: column-reverse;
     }
 `
 
@@ -72,9 +77,9 @@ export const Section1 = styled.section`
         display: none;
     }
     @media screen and (max-width: 769px) {
-        margin-left: 20px ;
+        margin-left: 10px ;
         border-top: 1px solid;
-        width: 50%;
+        width: 40%;
         h1{
         font-size: 25px;
         }       
@@ -93,6 +98,14 @@ export const Section1 = styled.section`
         }
         .description_2{
             display: block
+        }
+    }
+    @media screen and (max-width: 379px){
+        width: 90%;
+        border:none;
+        margin-top: 15px;
+        h1{
+            display:none;
         }
     }
 `
@@ -115,8 +128,13 @@ export const Section2 = styled.section`
         margin-top: 25px;
     }
     @media screen and (max-width: 769px) {
-        width: 50%;
-        margin-top: 50px;
+        width: 60%;
+    }
+    @media screen and (max-width: 379px) {
+        width: 100%;
+        h1{
+            display: block;
+        }
     }
 `
 
@@ -134,179 +152,5 @@ export const Section3 = styled.section`
     }
     @media screen and (max-width:769px) {
         display:none;
-    }
-`
-
-
-
-export const NewLetter = styled.div`
-    display: flex;
-    height: 300px;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-    background-color: #000;
-    font-family: 'Poppins', sans-serif;
-    padding: 40px 150px;
-
-    h4 {
-        font-size: 40px;
-        font-weight: 700;
-        color: #088178;
-        padding-bottom: 10px;
-    }
-
-    p {
-        font-size: 20px;
-        font-weight: 600;
-        color: rgb(47, 47, 47);
-    }
-
-    p span {
-        color: rgba(189, 131, 57, 0.93);
-    }
-
-    .form {
-        display: flex;
-        width: 35%;
-    }
-
-    .form input {
-        height: 6.3rem;
-        padding: 1.75rem;
-        font-size: 14px;
-        width: 100%;
-        border: 1px solid transparent;
-        outline: none;
-        border-radius: 5px;
-        border-radius: 5px 0 0 5px;
-    }
-
-    .form button {
-        background-color: #088178;
-        color: #fff;
-        font-size: 15px;
-        white-space: nowrap;
-        padding: 0 4rem;
-        border-radius: 0 5px 5px 0;
-        border: none;
-        cursor: pointer;
-        white-space: 10px;
-        transition: all 0.35s ease;
-    }
-
-    button:hover {
-        background-color: #055f59;
-    }
-    @media screen and (max-width: 769px) {
-    margin-top:100px;
-    margin-left:-50px;
-    margin-right:-50px;
-    padding: 40px 150px;
-    width: 100%;
-    height: 300px;
-    justify-content: space-between;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: 20% 30%;
-    background-color: #000;
-    font-family: 'Poppins', sans-serif;
-    h4{
-        font-size: 30px;
-        font-weight: 700;
-        color: #088178;
-        padding-bottom: 10px;
-    }
-    p{
-        font-size: 20px;
-        font-weight: 600;
-        color: rgb(47, 47, 47);
-    }
-    p span{
-        color: rgba(189, 131, 57, 0.93);
-    }
-    .form{
-        display: flex;
-        width: 100%;
-    }
-    input{
-        height: 6.3rem;
-        padding: 1.75rem;
-        font-size: 14px;
-        width: 100%;
-        border: 1px solid transparent;
-        outline: none;
-        border-radius: 5px;
-        border-radius:  5px 0 0 5px;
-    } 
-    button{
-        background-color: #088178;
-        color: #fff;
-        font-size: 15px;
-        white-space: nowrap;
-        padding: 0 3rem;
-        border-radius: 0 5px 5px 0;
-        border: none;
-        cursor: pointer;
-        white-space: 10px;
-        transition: all 0.35s ease;
-    }
-    button:hover{
-        background-color: #055f59;
-    }
-    }
-    @media screen and (max-width: 379px) {
-    padding: 20px 10px;
-    width: 100%;
-    height: 300px;
-    justify-content: space-between;
-    align-items: center;
-    background-repeat: no-repeat;
-    background-position: 40% 20%;
-    h4{
-        font-size: 30px;
-        font-weight: 700;
-        color: #088178;
-        padding-bottom: 10px;
-    }
-    p{
-        font-size: 18px;
-        font-weight: 600;
-        color: rgb(47, 47, 47);
-    }
-    p span{
-        color: rgba(189, 131, 57, 0.93);
-    }
-    .form{
-        display: flex;
-        width: 100%;
-    }
-    input{
-        height: 6.3rem;
-        padding: 1.75rem;
-        font-size: 14px;
-        width: 100%;
-        border: 1px solid transparent;
-        outline: none;
-        border-radius: 5px;
-        border-radius:  5px 0 0 5px;
-    } 
-    button{
-        background-color: #088178;
-        color: #fff;
-        font-size: 15px;
-        white-space: nowrap;
-        padding: 0 3rem;
-        border-radius: 0 5px 5px 0;
-        border: none;
-        cursor: pointer;
-        white-space: 10px;
-        transition: all 0.35s ease;
-    }
-    button:hover{
-        background-color: #055f59;
-    }
     }
 `

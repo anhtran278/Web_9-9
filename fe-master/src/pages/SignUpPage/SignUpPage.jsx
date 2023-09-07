@@ -5,6 +5,7 @@ import { EyeFilled, EyeInvisibleFilled } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import * as UserService from '../../services/UserService';
 import { useMutationHooks } from '../../hooks/useMutationHook';
+import { useEffect } from 'react'
 import Loading from '../../components/LoadingComponent/Loading';
 import * as message from '../../components/Message/Message';
 import background3 from '../../assets/images/background3.jpg';
@@ -34,7 +35,6 @@ const SignUpPage = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const [isHovered, setIsHovered] = useState(false);
 
-  // State for error messages
   const [emailError, setEmailError] = useState('');
   const [confirmPasswordError, setConfirmPasswordError] = useState('');
 
@@ -48,7 +48,6 @@ const SignUpPage = () => {
 
   const handleOnchangeEmail = (value) => {
     setEmail(value);
-    // Validate the email field and update the error state
     if (!isValidEmail(value)) {
       setEmailError('Please enter a valid email address.');
     } else {
@@ -59,14 +58,21 @@ const SignUpPage = () => {
   const mutation = useMutationHooks((data) => UserService.signupUser(data));
 
   const { data, isLoading, isSuccess, isError } = mutation;
+    useEffect(() => {
+    if (isSuccess) {
+      message.success()
+      handleNavigateSignIn()
+    } else if (isError) {
+      message.error()
+    }
+  }, [isSuccess, isError])
 
   const handleOnchangePassword = (value) => {
     setPassword(value);
   };
-
+  
   const handleOnchangeConfirmPassword = (value) => {
     setConfirmPassword(value);
-    // Validate the confirm password field and update the error state
     if (value !== password) {
       setConfirmPasswordError('Passwords do not match.');
     } else {
@@ -79,13 +85,11 @@ const SignUpPage = () => {
   };
 
   const handleSignUp = () => {
-    // Check for any validation errors before submitting the form
     if (!email || !password || !confirmPassword) {
       message.error('Please fill in all the required fields.');
       return;
     }
 
-    // Check for specific field validation errors
     if (emailError || confirmPasswordError) {
       message.error('Please fix the form errors.');
       return;
@@ -95,10 +99,6 @@ const SignUpPage = () => {
   };
 
   const isValidEmail = (email) => {
-    // Add your email validation logic here
-    // For a basic email validation, you can use a regular expression
-    // Example: /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    // Return true if the email is valid, otherwise false
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
 

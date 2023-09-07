@@ -8,8 +8,3 @@ export const Admin = styled.div`
     }
 `
 
-export const Menu = styled.div`
-    @media screen and (max-width:796px) {
-        
-    }
-`

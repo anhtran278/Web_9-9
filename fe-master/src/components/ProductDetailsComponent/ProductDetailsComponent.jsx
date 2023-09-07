@@ -7,13 +7,11 @@
     import { useLocation, useNavigate } from 'react-router-dom';
     import { addOrderProduct } from '../../redux/slides/orderSlide';
     import { convertPrice } from '../../utils';
-    import backgroundFooter from '../../assets/images/backgound2.jpg';
     import {
     Article,
     Section1,
     Section2,
     Section3,
-    NewLetter,
     } from './style';
 
     const ProductDetailsComponent = ({ idProduct }) => {
@@ -68,6 +66,7 @@
                 name: productDetails?.name,
                 amount: numProduct,
                 image: productDetails?.image,
+                detailImg: productDetails?.detailImg,
                 price: productDetails?.price,
                 product: productDetails?._id,
                 discount: productDetails?.discount,
@@ -147,11 +146,19 @@
 
             <Section2>
             <h1 style={{textTransform: 'uppercase'}}>{productDetails?.name}</h1>
-            <img
-                src={currentImage || productDetails?.image}
-                id="mainimg"
-                alt=""
-            />
+            <img src={currentImage || productDetails?.image} id="mainimg" alt=""/>
+            <div className="small-img">
+            {productDetails?.images &&
+                productDetails.images.map((image, index) => (
+                <img
+                    key={index}
+                    src={image}
+                    className={`smallimg ${currentImage === image ? 'active' : ''}`}
+                    onClick={() => handleThumbnailClick(image)}
+                    alt=""
+                />
+                ))}
+            </div>
             </Section2>
             
             <Section3>
@@ -161,16 +168,6 @@
             </Section3>
         </Article>
         </Loading>
-        {/* <NewLetter  style={{backgroundImage: `url(${backgroundFooter})`}}>
-            <div className="newstext">
-                <h4>Sign Up For Newsletters</h4>
-                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
-            </div>
-            <div className="form">
-                <input type="text" placeholder="Your email address..."/>
-                <button>Sign Up</button>
-            </div>
-        </NewLetter> */}
     </>
     );
     };
