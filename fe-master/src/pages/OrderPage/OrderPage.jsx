@@ -18,6 +18,7 @@ import * as message from '../../components/Message/Message'
 import { updateUser } from '../../redux/slides/userSlide';
 import { useNavigate } from 'react-router-dom';
 import StepComponent from '../../components/StepConponent/StepComponent';
+import './reponsive.css'
 
 const OrderPage = () => {
   const order = useSelector((state) => state.order)
@@ -114,12 +115,12 @@ const OrderPage = () => {
   },[order])
 
   const diliveryPriceMemo = useMemo(() => {
-    if(priceMemo >= 20000 && priceMemo < 500000){
-      return 10000
-    }else if(priceMemo >= 500000 || order?.orderItemsSlected?.length === 0) {
+    if(priceMemo >= 2 && priceMemo < 50){
+      return 10
+    }else if(priceMemo >= 50 || order?.orderItemsSlected?.length === 0) {
       return 0
     } else {
-      return 20000
+      return 20
     }
   },[priceMemo])
 
@@ -187,39 +188,39 @@ const OrderPage = () => {
   }
   const itemsDelivery = [
     {
-      title: '20.000 VND',
-      description: 'Dưới 200.000 VND',
+      title: '2.00 USD',
+      description: 'Under 2.00 USD',
     },
     {
-      title: '10.000 VND',
-      description: 'Từ 200.000 VND đến dưới 500.000 VND',
+      title: '10.00 USD',
+      description: ' 20.00 USD to 50.00 USD',
     },
     {
       title: 'Free ship',
-      description : 'Trên 500.000 VND',
+      description : 'Above 50.00 USD',
     },
   ]
   return (
-    <div style={{background: '#f5f5fa', with: '100%', height: '100vh'}}>
-      <div style={{height: '100%', width: '1270px', margin: '0 auto'}}>
-        <h3 style={{fontWeight: 'bold'}}>Giỏ hàng</h3>
+    <div className='cart' style={{ background: '#f5f5fa', paddingTop: '80px', with: '100%', height: '100vh'}}>
+      <div style={{height: '100%', width: '1270px', margin: '0 auto', }}>
+        <h2 style={{fontWeight: 'bold', fontSize:'40px', margin: '0 0px 10px 10px',}}>Cart</h2>
         <div style={{ display: 'flex', justifyContent: 'center'}}>
           <WrapperLeft>
-            <h4>Phí giao hàng</h4>
+            <h4>Delivery charges</h4>
             <WrapperStyleHeaderDilivery>
-              <StepComponent items={itemsDelivery} current={diliveryPriceMemo === 10000 
-                ? 2 : diliveryPriceMemo === 20000 ? 1 
+              <StepComponent items={itemsDelivery} current={diliveryPriceMemo === 10 
+                ? 2 : diliveryPriceMemo === 20 ? 1 
                 : order.orderItemsSlected.length === 0 ? 0:  3}/>
             </WrapperStyleHeaderDilivery>
             <WrapperStyleHeader>
                 <span style={{display: 'inline-block', width: '390px'}}>
                   <CustomCheckbox onChange={handleOnchangeCheckAll} checked={listChecked?.length === order?.orderItems?.length}></CustomCheckbox>
-                  <span> Tất cả ({order?.orderItems?.length} sản phẩm)</span>
+                  <span> All ({order?.orderItems?.length} Product)</span>
                 </span>
                 <div style={{flex:1,display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                  <span>Đơn giá</span>
-                  <span>Số lượng</span>
-                  <span>Thành tiền</span>
+                  <span>Unit price</span>
+                  <span>Quantity</span>
+                  <span>Into money</span>
                   <DeleteOutlined style={{cursor: 'pointer'}} onClick={handleRemoveAllOrder}/>
                 </div>
             </WrapperStyleHeader>
@@ -227,17 +228,18 @@ const OrderPage = () => {
               {order?.orderItems?.map((order) => {
                 return (
                   <WrapperItemOrder key={order?.product}>
-                <div style={{width: '390px', display: 'flex', alignItems: 'center', gap: 4}}> 
+                <div style={{width: '390px', display: 'flex', alignItems: 'center', gap: 4, }}> 
                   <CustomCheckbox onChange={onChange} value={order?.product} checked={listChecked.includes(order?.product)}></CustomCheckbox>
                   <img src={order?.image} style={{width: '77px', height: '79px', objectFit: 'cover'}}/>
                   <div style={{
                     width: 260,
                     overflow: 'hidden',
                     textOverflow:'ellipsis',
-                    whiteSpace:'nowrap'
+                    whiteSpace:'nowrap',
+                    textTransform: 'uppercase',
                   }}>{order?.name}</div>
                 </div>
-                <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
+                <div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'space-between', }}>
                   <span>
                     <span style={{ fontSize: '13px', color: '#242424' }}>{convertPrice(order?.price)}</span>
                   </span>
@@ -259,33 +261,33 @@ const OrderPage = () => {
             </WrapperListOrder>
           </WrapperLeft>
           <WrapperRight>
-            <div style={{width: '100%'}}>
+            <div style={{width: '100%', marginTop:'30px'}}>
               <WrapperInfo>
                 <div>
-                  <span>Địa chỉ: </span>
+                  <span>Address: </span>
                   <span style={{fontWeight: 'bold'}}>{ `${user?.address} ${user?.city}`} </span>
-                  <span onClick={handleChangeAddress} style={{color: '#9255FD', cursor:'pointer'}}>Thay đổi</span>
+                  <span onClick={handleChangeAddress} style={{color: '#9255FD', cursor:'pointer'}}>Change</span>
                 </div>
               </WrapperInfo>
               <WrapperInfo>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                  <span>Tạm tính</span>
+                  <span>Provisional</span>
                   <span style={{color: '#000', fontSize: '14px', fontWeight: 'bold'}}>{convertPrice(priceMemo)}</span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                  <span>Giảm giá</span>
+                  <span>Discount</span>
                   <span style={{color: '#000', fontSize: '14px', fontWeight: 'bold'}}>{convertPrice(priceDiscountMemo)}</span>
                 </div>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                  <span>Phí giao hàng</span>
+                  <span>Delivery charges</span>
                   <span style={{color: '#000', fontSize: '14px', fontWeight: 'bold'}}>{convertPrice(diliveryPriceMemo)}</span>
                 </div>
               </WrapperInfo>
               <WrapperTotal>
-                <span>Tổng tiền</span>
+                <span>Total amount</span>
                 <span style={{display:'flex', flexDirection: 'column'}}>
                   <span style={{color: 'rgb(254, 56, 52)', fontSize: '24px', fontWeight: 'bold'}}>{convertPrice(totalPriceMemo)}</span>
-                  <span style={{color: '#000', fontSize: '11px'}}>(Đã bao gồm VAT nếu có)</span>
+                  <span style={{color: '#000', fontSize: '11px'}}>(VAT included if applicable)</span>
                 </span>
               </WrapperTotal>
             </div>
@@ -299,13 +301,13 @@ const OrderPage = () => {
                   border: 'none',
                   borderRadius: '4px'
               }}
-              textbutton={'Mua hàng'}
+              textbutton={'Purchase'}
               styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
           ></ButtonComponent>
           </WrapperRight>
         </div>
       </div>
-      <ModalComponent title="Cập nhật thông tin giao hàng" open={isOpenModalUpdateInfo} onCancel={handleCancleUpdate} onOk={handleUpdateInforUser}>
+      <ModalComponent title="Update delivery information" open={isOpenModalUpdateInfo} onCancel={handleCancleUpdate} onOk={handleUpdateInforUser}>
         <Loading isLoading={isLoading}>
         <Form
             name="basic"

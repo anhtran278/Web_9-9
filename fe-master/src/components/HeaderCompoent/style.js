@@ -1,5 +1,3 @@
-import { Row } from "antd";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 
@@ -11,54 +9,13 @@ export const WrapperContentPopup = styled.p`
 `
 
 export const Header = styled.header`
-    margin: 0 100px;
-    .search-container{
-    position: absolute;
-    right: 50px;
+    margin: 0 80px;
+    @media screen and ( max-width: 769px ) {
+        margin: 20px 50px;
     }
-    .search-box {
-    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: #ebebeb;
-    
-    }
-    .search-box + label .search-icon {
-        color: black;
-    }
-    .search-box:hover {
-        color: white;
-        background: #088179c0;
-        box-shadow: 0 0 0 5px #464747d9;
-    }
-    .search-box:hover + label .search-icon {
-        color: white;
-    }
-    .search-box:focus {
-        transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        padding-left: 15px;
-        cursor: text;
-        width: 300px;
-        border-radius: auto;
-        background: #ebebeb;
-        color: black;
-    }
-    .search-box:focus + label .search-icon {
-        color: black;
-    }
-    .search-box:not(:focus) {
-        text-indent: -5000px;
-    }
-    
-    #search-submit {
-        position: relative;
-        left: -5000px;
+
+    @media screen and ( max-width: 376px ) {
+        margin: 10px 30px;
     }
 `;
 
@@ -72,6 +29,7 @@ export const HeaderTop = styled.div`
     justify-content: flex-end;
     border-bottom: #3d4752 1px solid;
     padding: 10px 0;
+    
 `;
 
 export const HeaderItemsList = styled.ul`
@@ -107,76 +65,79 @@ export const HeaderMid = styled.div`
     display: flex;
     align-items: flex-start;
     margin: 30px 0 45px 0px;
+    #open{
+        display:none;
+    }
+    @media screen and (max-width:769px){
+        #open{
+        display: block;
+        position: absolute;
+        font-size: 23px;
+        }
+        .searchBox{
+        position: absolute;
+        top: 225px;
+        left: 280px;
+        font-size: 1px
+        }
+        .searchButton{
+        right: 0px;
+        font-size: 15px;
+        }
+    }
+    @media screen and (max-width:376px){
+        #open{
+        display: block;
+        position: absolute;
+        font-size: 18px;
+        }
+        .searchBox{
+        position: absolute;
+        top: 200px;
+        left: 110px;
+        }
+        .searchButton{
+        right: 0px;
+        font-size: 15px;
+        }
+    }
 `;
 
 export const NgonNgu = styled.div`
     margin-right: 45%;
+    @media screen and (max-width:769px) {
+        display:none
+    }
+    
 `;
 
 export const HeaderMidImage = styled.img`
     height: 100px;
-`;
-
-export const SearchContainer = styled.div`
-    position: absolute;
-    right: 60px;
-`;
-
-export const SearchBox = styled.input`
-    transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
-    width: 40px;
-    height: 40px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: #ebebeb;
-    
-    & + label .search-icon {
-        color: black;
+    margin-bottom: 30px;
+    display: block;
+    @media screen and (max-width:769px) {
+        position: relative;
+        display: block;
+        margin: 0 290px;
     }
-    
-    &:hover {
-        color: white;
-        background: #088179c0;
-        box-shadow: 0 0 0 5px #464747d9;
-        
-        & + label .search-icon {
-            color: white;
-        }
-    }
-    
-    &:focus {
-        transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
-        border: none;
-        outline: none;
-        box-shadow: none;
-        padding-left: 15px;
-        cursor: text;
-        width: 300px;
-        border-radius: auto;
-        background: #ebebeb;
-        color: black;
-        
-        & + label .search-icon {
-            color: black;
-        }
-    }
-    
-    &:not(:focus) {
-        text-indent: -5000px;
+    @media screen and (max-width:376px) {
+        position: relative;
+        height: 70px;
+        display: block;
+        margin: 0 130px;
     }
 `;
 
-export const SearchSubmit = styled.input`
-    position: relative;
-    left: -6000px;
-`;
-
-export const SearchOutlined = styled.i`
-    position: relative;
-    left: -30px;
-    color: white;
-    cursor: pointer;
+export const NgonNgu2 = styled.div`
+    display: none;
+    @media screen and (max-width: 769px) {
+        display: block;
+        margin: 30px 20px;
+    }
+    @media screen and (max-width: 376px) {
+        display: block;
+        margin: 30px 20px;
+    }
 `;
 
 export const HeaderBottom = styled.div`
@@ -184,57 +145,135 @@ export const HeaderBottom = styled.div`
     justify-content: space-between;
     border-bottom: #222 1px solid;
     padding-bottom: 30px;
-`;
-
-export const HeaderBottomList = styled.ul`
-    display: flex;
-`;
-
-export const HeaderBottomListItem = styled.li`
-    list-style: none;
-    padding: 0 20px;
-`;
-
-export const HeaderBottomLink = styled.a`
-    text-decoration: none;
-    color: #222;
-    padding: 5px;
-    position: relative;
-    font-size: 15px;
-    font-weight: 400;
-    color: #1a1a1a;
-    transition: all 0.3 ease;
-    
-    &:hover{
+    #menu{
+        display: flex;
+    }
+    #menu li{
+        list-style: none;
+        padding: 0 20px;
+    }
+    #menu li a{
+        text-decoration: none;
+        color: #222;
+        padding: 5px;
+        position: relative;
+        font-size: 17px;
+        font-weight: 400;
         color: #1a1a1a;
+        transition: all 0.3 ease;
+        
+        &:hover{
+            color: #1a1a1a;
+        }
+        &::before {
+            content: "";
+            height: 2px;
+            width: 0;
+            background-color: #088178;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            transition: 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        
+        &:hover::before {
+            width: 100%;
+        }
     }
-    &::before {
-        content: "";
-        height: 2px;
-        width: 0;
-        background-color: #088178;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        transition: 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+    #close{
+        display:none;
     }
     
-    &:hover::before {
-        width: 100%;
+    @media screen and (max-width: 769px) {
+        #menu{
+            padding: 50px 0 0 0 ;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 350px;
+            height: 100vh;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 2px 0 5px -2px #888;
+            border-left: 7px solid #055f59dd;
+            z-index: 100000;
+            transition: all 0.35s ease-in-out;
+        }
+        #menu.active{
+            left: 0px;
+        }
+        #menu li{
+            border-bottom: 1px solid grey;
+            padding: 15px;
+        }
+        #menu li a{
+            margin-right: 100px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        #close{
+                display: block;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                color: rgba(0, 0, 0, 0.527);
+                font-size: 20px;
+        }
+        .shoppingOutLined{
+        position: relative;
+            bottom: 140px;
+        }
     }
+    @media screen and (max-width: 376px) {
+        #menu{
+            padding: 50px 0 0 0 ;
+            position: fixed;
+            top: 0;
+            right: 100%;
+            max-width: 290px;
+            height: 100vh;
+            background-color: #f2f2f2;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            box-shadow: 2px 0 5px -2px #888;
+            border-left: 7px solid #055f59dd;
+            z-index: 100000;
+            transition: all 0.4s ease;
+        }
+        #menu.active{
+            left: 0px;
+        }
+        #menu li{
+            border-bottom: 1px solid grey;
+            padding: 15px;
+        }
+        #menu li a{
+            margin-right: 100px;
+            font-size: 17px;
+            font-weight: 500;
+        }
+        #close{
+            display: block;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: rgba(0, 0, 0, 0.527);
+            font-size: 20px;
+        }
+        .shoppingOutLined{
+            position: relative;
+            bottom: 115px;
+        }
+    }
+    
 `;
 
 
 
-export const BarsIcon = styled.i`
-    display: none;
-`;
 
-export const NgonNgu2 = styled.div`
-    display: none;
-`;
 
-export const CloseButton = styled.div`
-    display: none;
-`;
+
 

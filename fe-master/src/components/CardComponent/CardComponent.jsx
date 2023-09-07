@@ -16,7 +16,7 @@ const CardComponent = (props) => {
     return (
         <WrapperCardStyle
             hoverable
-            cover={<img alt="example" src={image} />}
+            cover={<img alt="Product" src={image} />}
             hoverImage={props.hoverImage}
             onClick={() =>  handleDetailsProduct(id)}
         >

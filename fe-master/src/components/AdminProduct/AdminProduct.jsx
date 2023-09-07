@@ -156,7 +156,7 @@ const AdminProduct = () => {
   const { data, isLoading, isSuccess, isError } = mutation
   const { data: dataUpdated, isLoading: isLoadingUpdated, isSuccess: isSuccessUpdated, isError: isErrorUpdated } = mutationUpdate
   const { data: dataDeleted, isLoading: isLoadingDeleted, isSuccess: isSuccessDelected, isError: isErrorDeleted } = mutationDeleted
-  const { data: dataDeletedMany, isLoading: isLoadingDeletedMany, isSuccess: isSuccessDelectedMany, isError: isErrorDeletedMany } = mutationDeletedMany
+  const { data: dataDeletedMany, /*isLoading: isLoadingDeletedMany*/ isSuccess: isSuccessDelectedMany, isError: isErrorDeletedMany } = mutationDeletedMany
 
 
   const queryProduct = useQuery({ queryKey: ['products'], queryFn: getAllProducts })

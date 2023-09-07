@@ -14,6 +14,7 @@ import { useSelector } from 'react-redux';
 import { useQueries } from '@tanstack/react-query';
 import { useMemo } from 'react';
 import Loading from '../../components/LoadingComponent/Loading';
+import { Admin } from './style';
 
 const AdminPage = () => {
   const user = useSelector((state) => state?.user)
@@ -93,15 +94,15 @@ const AdminPage = () => {
   }
   console.log('memoCount', memoCount)
   return (
-    <>
+    <Admin>
       {/* <HeaderComponent isHiddenSearch isHiddenCart /> */}
-      <div style={{ display: 'flex',overflowX: 'hidden', margin: '20px 90px' }}>
+      <Admin style={{ display: 'flex',overflowX: 'hidden', margin: '20px 90px' }}>
         <Menu
           mode="inline"
           style={{
             width: 256,
             boxShadow: '1px 1px 2px #ccc',
-            height: '100vh'
+            height: 'auto',
           }}
           items={items}
           onClick={handleOnCLick}
@@ -114,8 +115,8 @@ const AdminPage = () => {
           </Loading>
           {renderPage(keySelected)}
         </div>
-      </div>
-    </>
+      </Admin>
+    </Admin>
   )
 }
 

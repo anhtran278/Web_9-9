@@ -20,10 +20,12 @@ import {
   RowImage,
   HoverContentLink,
   InstallImage,
+  CopyRight,
 } from './style';
 
 function FooterComponent() {
   return (
+    <>
     <Footer>
       <FooterCol>
         <LogoFooter src={logo} alt="" />
@@ -82,6 +84,10 @@ function FooterComponent() {
           <InstallImage src={pay} alt="" />
       </FooterCol>
     </Footer>
+    <CopyRight>
+        <p className='p'>© 2023 Van Lang University™. All rights reserved.</p>
+    </CopyRight>
+    </>
   );
 }
 

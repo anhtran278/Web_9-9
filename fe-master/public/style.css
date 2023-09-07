@@ -1,0 +1,32 @@
+.backToTop{
+    position: fixed;
+    font-size: 50px;
+    bottom: 80px;
+    right: 40px;
+    color: rgba(69, 177, 170, 0.568);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    display: none;
+    transition: all 0.4s ease;
+}
+
+.backToTop:hover{
+    color: #088179d2;
+}
+
+@media screen and (max-width:379px){
+    .backToTop{
+        font-size: 30px;
+        bottom: 40px;
+        right: 30px;
+    }
+}
+
+@media screen and (max-width:769px){
+    .backToTop{
+        font-size: 40px;
+        bottom: 40px;
+        right: 30px;
+    }
+}

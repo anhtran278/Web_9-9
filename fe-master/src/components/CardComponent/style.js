@@ -5,17 +5,31 @@ import styled from "styled-components";
 
 export const WrapperCardStyle = styled(Card)`
     width: 568px;
-    margin: 5px;
+    margin: 0 5px 50px 5px;
     position: relative;
+    
     cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
     & img {
         height: 709px;
-        width: 568px;
+        width: auto;
+        object-fit: cover;
     },
-    &:hover {
-    background-image: url(${props => props.hoverImage || ''});
+    &::hover {
+    ${'' /* background-image: url(${props => props.hoverImage || ''}); */}
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
     }
-    
+    @media screen and (max-width: 769px) {
+        margin: 0 5px 50px 40px;
+    }
+    @media screen and (max-width: 379px) {
+        width: 370px;
+        margin: -10px 20px 50px -60px;
+    & img {
+        height: 450px;
+        width: auto;
+    }
+    }
 `
 
 export const StyleNameProduct = styled.div`
@@ -39,6 +53,7 @@ export const WrapperPriceText = styled.div`
     line-height:16.5px;
     text-align:center;
     text-transform:uppercase;
+    margin-top:10px;
 `
 export const WrapperReportText = styled.div`
     font-size: 11px;

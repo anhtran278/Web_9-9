@@ -12,10 +12,11 @@ import people1 from '../../assets/images/people1.jpg';
 import people2 from '../../assets/images/people2.jpg';
 import people3 from '../../assets/images/people3.jpg';
 import people4 from '../../assets/images/people4.jpg';
+import { Section } from './style';
 
 const ContactPage = () => {
     return (
-    <>
+    <Section>
         <section id="page_header" style={{backgroundImage: `url(${backgroundHeader})`}}>
             <h1>#readmore</h1>
             <p> Read all case studies about our product! </p>
@@ -95,7 +96,7 @@ const ContactPage = () => {
                 <button>Sign Up</button>
             </div>
         </section>
-    </>
+    </Section>
     )
 }
 

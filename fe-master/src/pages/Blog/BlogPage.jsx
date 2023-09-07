@@ -10,14 +10,16 @@ import blog5 from '../../assets/images/blog5.jpg';
 import blog6 from '../../assets/images/blog6.jpg';
 import blog7 from '../../assets/images/blog7.jpg';
 import blog8 from '../../assets/images/blog8.jpg';
+import { Section } from './style';
 
 const Blog = () => {
     return (
-        <>
+        <Section>
             <section id="page_header" style={{backgroundImage: `url(${backgroundHeader})`}}>
                 <h1>#readmore</h1>
                 <p> Read all case studies about our product! </p>
             </section>
+            
             <section id="blog">
             <div className="blog_box">
                 <div className="blog_img">
@@ -115,6 +117,7 @@ const Blog = () => {
                 <h1>0 7 / 0 3</h1> 
             </div>
         </section>
+
         <section id="newsletter" class="section_p1" style={{backgroundImage: `url(${backgroundFooter})`}}>
             <div className="newstext">
                 <h4>Sign Up For Newsletters</h4>
@@ -125,7 +128,7 @@ const Blog = () => {
                 <button>Sign Up</button>
             </div>
         </section>
-        </>
+        </Section>
     );
 };
 export default Blog;

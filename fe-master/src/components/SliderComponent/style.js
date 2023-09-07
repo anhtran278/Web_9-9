@@ -38,5 +38,15 @@ export const WrapperSliderStyle = styled(Slider)`
             }
         }
     }
+    @media screen and (max-width: 379px) {
+        & .slick-arrow.slick-next {
+        right: 900px;
+        &::before {
+            font-size: 30px;
+            color: Black;
+        }
+    }
+    }
+    
 `
 

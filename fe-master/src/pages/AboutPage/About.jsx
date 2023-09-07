@@ -3,10 +3,11 @@ import backgroundFooter from '../../assets/images/backgound2.jpg';
 import backgroundHeader from '../../assets/images/book_background.jpg';
 import thuongHieu from '../../assets/images/thuonghieu.jpg';
 import './about.css'
+import { Section } from './style';
 
 const NotFoundPage = () => {
     return (
-        <>
+        <Section>
             <section id="page_header" style={{backgroundImage: `url(${backgroundHeader})`}}>
                 <h1>#know us</h1>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
@@ -34,7 +35,7 @@ const NotFoundPage = () => {
                     <button>Sign Up</button>
                 </div>
             </section>
-            </>
+            </Section>
     )
 }
 

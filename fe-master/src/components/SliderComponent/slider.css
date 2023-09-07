@@ -1,0 +1,21 @@
+
+.imageDefault{
+    object-fit: cover;
+    z-index: 3;
+}
+.imageHover{
+    position: relative;
+    opacity: 0;
+    margin-top: -305.5px;
+    transition: ease-in-out 0.35s;
+}
+.imageHover:hover{
+    opacity: 1;
+}
+
+@media screen and (max-width:376px) {
+    .slide{
+        margin: 30px 0px;
+    }
+
+}

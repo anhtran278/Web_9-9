@@ -10,4 +10,5 @@ export const Section = styled.div`
             text-align: center;
         }
     }
+
 `

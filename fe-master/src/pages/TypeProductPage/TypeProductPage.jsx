@@ -21,13 +21,13 @@ const TypeProductPage = () => {
     const [loading, setLoading] = useState(false)
     const [panigate, setPanigate] = useState({
         page: 0,
-        limit: 10,
+        limit:10,
         total: 1,
     })
     const fetchProductType = async (type, page, limit) => {
         setLoading(true)
         const res = await ProductService.getProductType(type, page, limit)
-        if(res?.status == 'OK') {
+        if(res?.status === 'OK') {
             setLoading(false)
             setProducts(res?.data)
             setPanigate({...panigate, total: res?.totalPage})
@@ -56,7 +56,6 @@ const TypeProductPage = () => {
             <div style={{margin: '50px 0 50px 80px',}}>
                 <div style={{}}>
                     <Row style={{ }}>
-                        
                         <Col span={24} style={{display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
                             <WrapperProducts >
                                 {products?.filter((pro) => {
@@ -83,7 +82,7 @@ const TypeProductPage = () => {
                                     )
                                 })}
                             </WrapperProducts>
-                            <Pagination defaultCurrent={panigate.page + 1} total={panigate?.total} onChange={onChange} style={{ textAlign: 'center', marginTop: '20px' }} />
+                            <Pagination defaultCurrent={panigate.page + 1} total={panigate?.total} onChange={onChange} style={{ textAlign: 'center', marginTop: '20px', }} />
                         </Col>
                     </Row>
                 </div>

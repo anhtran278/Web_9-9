@@ -31,6 +31,17 @@ export const Content = styled.div`
         border: none;
         cursor: pointer;
     }
+    @media screen and (max-width:769px) {
+        h1{
+            margin-top: -4%;
+        }
+    }
+    @media screen and (max-width:769px) {
+        h1{
+            font-size: 20px;
+            margin-top: -7%;
+        }
+    }
 `;
 
 export const Q = styled.div`
@@ -43,9 +54,21 @@ export const Q = styled.div`
         font-size: 15px;
         align-self: center;
         padding: 30px 20px;
-        background-color: #FFFFFF; ;
+        background-color: #FFFFFF95; 
         margin-left: -10%;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @media screen and (max-width:769px) {
+        p{
+        width: 50%;
+        margin-left: -20%;
+        }
+    }
+    @media screen and (max-width:769px) {
+        p{
+        width: 100%;
+        margin-left: -40%;
+        }
     }
 `;
 
@@ -53,6 +76,7 @@ export const W = styled.div`
     display:inline-flex;
     img{
         width: 80%;
+        object-fit: cover;
         z-index: 0;
         position: relative;
         left: 20%;
@@ -61,7 +85,7 @@ export const W = styled.div`
         width: 50%;
         align-self: center;
         padding: 20px 40px 30px 30px;
-        background-color: #FFFFFF;
+        background-color: #FFFFFF95;
         margin-right: -10%;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         z-index: 1;
@@ -133,7 +157,7 @@ export const H4 = styled.div`
 
 export const Box4 = styled.div`
     img{
-    width: 100%;
+        width: 100%;
     }
     div{
         text-align: center;
@@ -150,13 +174,20 @@ export const Box4 = styled.div`
         letter-spacing: 2px;
     }
     div p{
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    div p{
         margin: 0 auto;
         width: 65%;
         margin-top: 1%;
         font-size: 16px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    @media screen and (max-width: 379px) {
+        div h2{
+        font-size: 20px;
+    }
+    div p{
+        width: 100%;
+        font-size: 13px;
+    }
     }
 `
 export const KhungGiay = styled.div`
@@ -216,7 +247,7 @@ export const TuiXach = styled.div`
 
 export const Quote = styled.div`
         margin: 0 auto;
-        width: 40%;
+        width: 70%;
         text-align: center;
     h3{
         font-family: 'Times New Roman', Times, serif;
@@ -243,6 +274,14 @@ export const Quote = styled.div`
         border: none;
         cursor: pointer;
     }
+    @media screen and (max-width:379px) {
+        h3{
+        font-size: 20px;
+    }
+    p{
+        font-size: 11px;
+    }
+    }
 `
 
 export const H2 = styled.div`
@@ -265,6 +304,11 @@ export const Box5 = styled.div`
     font-weight: 500;
     font-size: 17px;
     margin-bottom: 5%;
+    @media screen and (max-width:379px ) {
+        width: 60%;
+        boder-top: 1px solid black;
+        font-size: 13px;
+    }
 `
 
 export const Tree = styled.div`
@@ -294,6 +338,9 @@ export const Box6 = styled.div`
         font-weight: 400;
         font-size: 16px;
         margin-bottom: 50px;
+    }
+    @media screen and (max-width:379px) {
+
     }
 `
 
@@ -352,6 +399,113 @@ export const NewsLetter = styled.div`
     }
     button:hover{
         background-color: #055f59;
+    }
+    
+    @media screen and (max-width: 769px) {
+    padding: 40px 150px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 20% 30%;
+    background-color: #000;
+    font-family: 'Poppins', sans-serif;
+    h4{
+        font-size: 30px;
+        font-weight: 700;
+        color: #088178;
+        padding-bottom: 10px;
+    }
+    p{
+        font-size: 20px;
+        font-weight: 600;
+        color: rgb(47, 47, 47);
+    }
+    p span{
+        color: rgba(189, 131, 57, 0.93);
+    }
+    .form{
+        display: flex;
+        width: 100%;
+    }
+    input{
+        height: 6.3rem;
+        padding: 1.75rem;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        border-radius: 5px;
+        border-radius:  5px 0 0 5px;
+    } 
+    button{
+        background-color: #088178;
+        color: #fff;
+        font-size: 15px;
+        white-space: nowrap;
+        padding: 0 3rem;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        cursor: pointer;
+        white-space: 10px;
+        transition: all 0.35s ease;
+    }
+    button:hover{
+        background-color: #055f59;
+    }
+    }
+    @media screen and (max-width: 379px) {
+    padding: 20px 10px;
+    width: 100%;
+    height: 300px;
+    justify-content: space-between;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: 40% 20%;
+    h4{
+        font-size: 30px;
+        font-weight: 700;
+        color: #088178;
+        padding-bottom: 10px;
+    }
+    p{
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(47, 47, 47);
+    }
+    p span{
+        color: rgba(189, 131, 57, 0.93);
+    }
+    .form{
+        display: flex;
+        width: 100%;
+    }
+    input{
+        height: 6.3rem;
+        padding: 1.75rem;
+        font-size: 14px;
+        width: 100%;
+        border: 1px solid transparent;
+        outline: none;
+        border-radius: 5px;
+        border-radius:  5px 0 0 5px;
+    } 
+    button{
+        background-color: #088178;
+        color: #fff;
+        font-size: 15px;
+        white-space: nowrap;
+        padding: 0 3rem;
+        border-radius: 0 5px 5px 0;
+        border: none;
+        cursor: pointer;
+        white-space: 10px;
+        transition: all 0.35s ease;
+    }
+    button:hover{
+        background-color: #055f59;
+    }
     }
 `
 

@@ -10,21 +10,37 @@ import tuiXach from '../../assets/images/tuixach.webp';
 import viewStore from '../../assets/images/view_store_auto_x2.jpg';
 import backgroundFooter from '../../assets/images/backgound2.jpg';
 import pro2_1 from '../../assets/images/02.1.webp';
+import pro2 from '../../assets/images/02.webp';
 import pro3 from '../../assets/images/03.webp';
 import pro3_1 from '../../assets/images/03.1.webp';
-import pro4 from '../../assets/images/02.webp';
+import pro4 from '../../assets/images/04.webp';
+import pro4_1 from '../../assets/images/04.1.webp';
 import pro5_1 from '../../assets/images/05.1.webp';
+import pro5 from '../../assets/images/05.webp';
 import pro6_1 from '../../assets/images/06.1.webp';
+import pro6 from '../../assets/images/06.webp';
 import pro7_1 from '../../assets/images/07.1.webp';
+import pro7 from '../../assets/images/07.webp';
 import pro9_1 from '../../assets/images/09.1.webp';
+import pro9 from '../../assets/images/09.webp';
+import pro8 from '../../assets/images/08.webp';
+import pro8_1 from '../../assets/images/08.1.webp';
 import pro11 from '../../assets/images/11.1.webp';
+import pro11_ from '../../assets/images/11.webp';
 import pro13 from '../../assets/images/13.1.webp';
+import pro13_ from '../../assets/images/13.webp';
 import pro14 from '../../assets/images/14.1.webp';
+import pro14_ from '../../assets/images/14.webp';
 import pro15 from '../../assets/images/15.1.webp';
+import pro15_ from '../../assets/images/15.webp';
 import pro16 from '../../assets/images/16.1.webp';
+import pro16_ from '../../assets/images/16.webp';
 import pro17 from '../../assets/images/17.1.webp';
+import pro17_ from '../../assets/images/17.webp';
 import pro18 from '../../assets/images/18.1.webp';
+import pro18_ from '../../assets/images/18.webp';
 import pro19 from '../../assets/images/19.1.webp';
+import pro19_ from '../../assets/images/19.webp';
 import {
     Anh1,
     Content,
@@ -46,6 +62,7 @@ import SliderComponent from '../../components/SliderComponent/SliderComponent';
 
 
 const Trang_chu = () => {
+    
 
     
     return (
@@ -92,14 +109,14 @@ const Trang_chu = () => {
             </H4>
             
             <SliderComponent arrImages={[
-                { src: pro9_1, title: 'HECTOR TABLE LAMP BY ORIGINAL BTC', price: '$ 479.00' },
-                { src: pro3_1, title: 'SSB-2 in Pure Orange', price: '$ 298.00' },
-                { src: pro3, title: 'Librero Oakland by Book/Shop for Santa & Cole (Walnut)', price: '$ 198.00' },
-                { src: pro4, title: 'SSB-2 in Black White', price: '$150.00' },
-                { src: pro5_1, title: 'LBR-1 in SOLID WALNUT', price: '$ 2.250.00' },
-                { src: pro6_1, title: 'LBR-2 in SOLID ASH', price: '$ 495.00' },
-                { src: pro7_1, title: 'Librero Oakland by Book/Shop for Santa & Cole (Birch)', price: '$ 380.00' },
-                { src: pro2_1, title: 'SSB-2 in Pure Orange', price: '$ 150.00' },
+                { src: pro9_1, hoverSrc: pro9 , title: 'HECTOR TABLE LAMP BY ORIGINAL BTC', price: '$ 479.00' },
+                { src: pro3_1, hoverSrc: pro3 , title: 'SSB-2 in Pure Orange', price: '$ 298.00' },
+                { src: pro2_1, hoverSrc: pro2 , title: 'Librero Oakland by Book/Shop for Santa & Cole (Walnut)', price: '$ 198.00' },
+                { src: pro4_1, hoverSrc: pro4 , title: 'SSB-2 in Black White', price: '$150.00' },
+                { src: pro5_1, hoverSrc: pro5 , title: 'LBR-1 in SOLID WALNUT', price: '$ 2.250.00' },
+                { src: pro6_1, hoverSrc: pro6 , title: 'LBR-2 in SOLID ASH', price: '$ 495.00' },
+                { src: pro7_1, hoverSrc: pro7 , title: 'Librero Oakland by Book/Shop for Santa & Cole (Birch)', price: '$ 380.00' },
+                { src: pro8, hoverSrc: pro8_1 , title: 'SSB-2 in Pure Orange', price: '$ 150.00' },
             ]} />
 
             <Box4 class="box4">
@@ -142,14 +159,14 @@ const Trang_chu = () => {
             <H2>ACCESSORIES</H2>
 
             <SliderComponent arrImages={[
-                { src: pro11, title: 'HECTOR TABLE LAMP BY ORIGINAL BTC', price: '$ 479.00' },
-                { src: pro18, title: 'SSB-2 in Pure Orange', price: '$ 298.00' },
-                { src: pro13, title: 'Librero Oakland by Book/Shop for Santa & Cole (Walnut)', price: '$ 198.00' },
-                { src: pro14, title: 'SSB-2 in Black White', price: '$150.00' },
-                { src: pro15, title: 'LBR-1 in SOLID WALNUT', price: '$ 2.250.00' },
-                { src: pro16, title: 'LBR-2 in SOLID ASH', price: '$ 495.00' },
-                { src: pro17, title: 'Librero Oakland by Book/Shop for Santa & Cole (Birch)', price: '$ 380.00' },
-                { src: pro19, title: 'SSB-2 in Pure Orange', price: '$ 150.00' },
+                { src: pro11, hoverSrc: pro11_, title: 'HECTOR TABLE LAMP BY ORIGINAL BTC', price: '$ 479.00' },
+                { src: pro13, hoverSrc: pro13_, title: 'Librero Oakland by Book/Shop for Santa & Cole (Walnut)', price: '$ 198.00' },
+                { src: pro14, hoverSrc: pro14_, title: 'SSB-2 in Black White', price: '$150.00' },
+                { src: pro15, hoverSrc: pro15_, title: 'LBR-1 in SOLID WALNUT', price: '$ 2.250.00' },
+                { src: pro16, hoverSrc: pro16_, title: 'LBR-2 in SOLID ASH', price: '$ 495.00' },
+                { src: pro17, hoverSrc: pro17_, title: 'Librero Oakland by Book/Shop for Santa & Cole (Birch)', price: '$ 380.00' },
+                { src: pro18, hoverSrc: pro18_, title: 'SSB-2 in Pure Orange', price: '$ 298.00' },
+                { src: pro19, hoverSrc: pro19_, title: 'SSB-2 in Pure Orange', price: '$ 150.00' },
             ]} />
 
             <Box5>

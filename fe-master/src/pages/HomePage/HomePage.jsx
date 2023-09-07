@@ -8,7 +8,7 @@ import { useState } from 'react'
 import Loading from '../../components/LoadingComponent/Loading'
 import { useDebounce } from '../../hooks/useDebounce'
 import { useEffect } from 'react'
-
+import { Popover, Button} from 'antd'
 import backgroundFooter from '../../assets/images/backgound2.jpg';
 import backgroundHeader from '../../assets/images/book_background.jpg';
 import { 
@@ -16,16 +16,14 @@ import {
   WrapperProducts,
   WrapperTypeProduct,
   PageHeader,
-  Product1,
   NewLetter,
-  ProContainer,
-  Pro,
-} from './style'
+} from './style';
+import './style.css'
 
 const HomePage = () => {
   const searchProduct = useSelector((state) => state?.product?.search)
   const searchDebounce = useDebounce(searchProduct, 500)
-  const [loading, setLoading] = useState(false)
+  const [loading, /*setLoading*/] = useState(false)
   const [limit, setLimit] = useState(6)
   const [typeProducts, setTypeProducts] = useState([])
   
@@ -53,12 +51,12 @@ const HomePage = () => {
 
   return (
     <>
-      <PageHeader style={{backgroundImage: `url(${backgroundHeader})`}}>
-          <h1>#add to cart</h1>
-          <p>"Unlock Knowledge, Expand Your Mind - Buying Books is Investing in Your Intellect."</p>
-      </PageHeader>
+    <PageHeader style={{backgroundImage: `url(${backgroundHeader})`}}>
+        <h1>#add to cart</h1>
+        <p>"Unlock Knowledge, Expand Your Mind - Buying Books is Investing in Your Intellect."</p>
+    </PageHeader>
     <Loading isLoading={isLoading || loading}>
-      <div style={{ margin: '50px 0 0 70px', }}>
+      <div style={{ margin: '50px 80px 0 80px', borderBottom: '1px solid grey'}}>
         <WrapperTypeProduct>
           {typeProducts.map((item) => {
             return (
@@ -66,6 +64,14 @@ const HomePage = () => {
             )
           })}
         </WrapperTypeProduct>
+        <Popover className='popOver' placement="bottom" content={
+        <div>
+          {typeProducts.map((item) => (
+            <TypeProduct name={item} key={item} />
+          ))}
+        </div>} trigger="click">
+          <Button>Type Producte</Button>
+        </Popover>
       </div>
       <div className='body' style={{ width: '100%',}}>
         <div id="container" style={{ margin: '70px', }}>

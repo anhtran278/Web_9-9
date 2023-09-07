@@ -5,6 +5,9 @@ export const RowImage = styled.img`
     width: 200px;
     padding-bottom: 40px;
     padding-top: 20px;
+    @media screen and (max-width: 379px) {
+        width: 150px;
+    }
 `;
 
 export const Footer = styled.footer`
@@ -12,7 +15,13 @@ export const Footer = styled.footer`
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 40px 150px;
-
+    @media screen and (max-width: 379px) {
+        display:flex;
+        flex-direction: column;
+        padding: 40px 10px;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const FooterCol = styled.div`
@@ -20,6 +29,13 @@ export const FooterCol = styled.div`
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 10px;
+    @media screen and (max-width: 379px) {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px 0;
+        align-items: center;
+    }
 `;
 
 export const LogoFooter = styled.img`
@@ -31,11 +47,22 @@ export const FooterHeading = styled.h4`
     font-size: 18px;
     padding-bottom: 10px;
     font-weight: bold;
+    @media screen and (max-width: 379px) {
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `;
 
 export const FooterParagraph = styled.p`
     font-size: 13px;
     margin: 0 0 8px 0;
+    @media screen and (max-width: 379px) {
+        display:flex;
+        flex-direction: column;
+        text-align: center;
+    }
 `;
 
 export const FooterLink = styled.a`
@@ -70,6 +97,10 @@ export const IconLink = styled.a`
 `;
 
 export const InstallImage = styled.img`
+    width: 100%;
+    @media screen and (max-width: 379px) {
+        width: 89%;
+    }
 `;
 
 export const HoverContentLink = styled.a`
@@ -98,4 +129,17 @@ export const HoverContentLink = styled.a`
     }
 `;
 
+export const CopyRight = styled.div`
+    .p{
+    font-size: 16px;
+    text-align: center;
+    padding-bottom: 40px;
+    }
+    @media screen and (max-width: 379px) {
+        .p{
+        margin-top: -40px;
+        font-size: 13px;
+        }
+    }
+`
 

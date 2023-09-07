@@ -1,0 +1,17 @@
+.popOver{
+        display:none;
+    }
+@media screen and (max-width: 379px) {
+    .popOver {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+}
+@media screen and (max-width: 769px) {
+    .popOver {
+        display: block;
+        width: 100%;
+        border: none;
+    }
+    }

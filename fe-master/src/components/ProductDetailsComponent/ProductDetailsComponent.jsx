@@ -7,12 +7,13 @@
     import { useLocation, useNavigate } from 'react-router-dom';
     import { addOrderProduct } from '../../redux/slides/orderSlide';
     import { convertPrice } from '../../utils';
-    import LikeButtonComponent from '../LikeButtonComponent/LikeButtonComponent';
+    import backgroundFooter from '../../assets/images/backgound2.jpg';
     import {
     Article,
     Section1,
     Section2,
     Section3,
+    NewLetter,
     } from './style';
 
     const ProductDetailsComponent = ({ idProduct }) => {
@@ -86,10 +87,11 @@
     const { isLoading, data: productDetails } = useQuery(['product-details', idProduct], () => fetchGetDetailsProduct(idProduct), { enabled: !!idProduct });
 
     return (
+    <>
         <Loading isLoading={isLoading}>
         <Article>
             <Section1 style={{ fontSize: '15px' }}>
-            <h1>{productDetails?.name}</h1>
+            <h1 style={{textTransform: 'uppercase'}}>{productDetails?.name}</h1>
             <h2>{convertPrice(productDetails?.price)} USD</h2>
             <h3>
                 <b>Pay in 4 interest-free installments of</b>{' '}
@@ -98,15 +100,8 @@
                 <ins style={{ cursor: 'pointer' }}>Learn More</ins>
                 </b>
             </h3>
-            <LikeButtonComponent
-                dataHref={
-                process.env.REACT_APP_IS_LOCAL
-                    ? 'https://developers.facebook.com/docs/plugins/'
-                    : window.location.href
-                }
-            />
             <div className="bt">
-                <h4>Quantity</h4>
+                <h4>Quantity: </h4>
                 <input
                 type="number"
                 placeholder="1"
@@ -119,7 +114,7 @@
                 styleButton={{
                     background: '#021d49',
                     height: '48px',
-                    width: '200px',
+                    width: '150px',
                     border: 'none',
                     borderRadius: '4px',
                 }}
@@ -145,9 +140,13 @@
                     ))}
                 </div>
             </div>
+            <div className='description_2'>
+                <i>{productDetails?.description}</i>
+            </div>
             </Section1>
 
             <Section2>
+            <h1 style={{textTransform: 'uppercase'}}>{productDetails?.name}</h1>
             <img
                 src={currentImage || productDetails?.image}
                 id="mainimg"
@@ -156,12 +155,23 @@
             </Section2>
             
             <Section3>
-            <div>
+            <div className='description_1'>
                 <i>{productDetails?.description}</i>
             </div>
             </Section3>
         </Article>
         </Loading>
+        {/* <NewLetter  style={{backgroundImage: `url(${backgroundFooter})`}}>
+            <div className="newstext">
+                <h4>Sign Up For Newsletters</h4>
+                <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+            </div>
+            <div className="form">
+                <input type="text" placeholder="Your email address..."/>
+                <button>Sign Up</button>
+            </div>
+        </NewLetter> */}
+    </>
     );
     };
 

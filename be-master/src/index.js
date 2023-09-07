@@ -24,7 +24,7 @@ routes(app);
 
 mongoose.connect(`${process.env.MONGO_DB}`)
     .then(() => {
-         console.log('Connect Db success!')
+        console.log('Connect Db success!')
     })
     .catch((err) => {
         // console.log(err)

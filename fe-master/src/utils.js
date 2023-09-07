@@ -47,7 +47,7 @@ export const renderOptions = (arr) => {
 export const convertPrice = (price) => {
     try {
         const result  = price?.toLocaleString().replaceAll(',', '.')
-        return `$ ${result} .00 USD `
+        return `$ ${result}.00 USD `
     } catch (error) {
         return null
     }
