@@ -78,12 +78,12 @@ const PaymentPage = () => {
   },[order])
 
   const diliveryPriceMemo = useMemo(() => {
-    if(priceMemo > 200000){
-      return 10000
+    if(priceMemo > 20){
+      return 10
     }else if(priceMemo === 0 ){
       return 0
     }else {
-      return 20000
+      return 20
     }
   },[priceMemo])
 
@@ -244,21 +244,21 @@ const PaymentPage = () => {
     <div style={{background: '#f5f5fa', with: '100%', height: '100vh'}}>
       <Loading isLoading={isLoadingAddOrder}>
         <div style={{height: '100%', width: '1270px', margin: '0 auto'}}>
-          <h3>Thanh toán</h3>
+          <h1>Payments</h1>
           <div style={{ display: 'flex', justifyContent: 'center'}}>
             <WrapperLeft>
               <WrapperInfo>
                 <div>
-                  <Lable>Chọn phương thức giao hàng</Lable>
+                  <Lable>Choose a delivery method</Lable>
                   <WrapperRadio onChange={handleDilivery} value={delivery}> 
-                    <Radio  value="fast"><span style={{color: '#ea8500', fontWeight: 'bold'}}>FAST</span> Giao hàng tiết kiệm</Radio>
+                    <Radio  value="fast"><span style={{color: '#ea8500', fontWeight: 'bold'}}>FAST</span> Giao hàng Hỏa tốc</Radio>
                     <Radio  value="gojek"><span style={{color: '#ea8500', fontWeight: 'bold'}}>GO_JEK</span> Giao hàng tiết kiệm</Radio>
                   </WrapperRadio>
                 </div>
               </WrapperInfo>
               <WrapperInfo>
                 <div>
-                  <Lable>Chọn phương thức thanh toán</Lable>
+                  <Lable>Select a payment method</Lable>
                   <WrapperRadio onChange={handlePayment} value={payment}> 
                     <Radio value="later_money"> Thanh toán tiền mặt khi nhận hàng</Radio>
                     <Radio value="paypal"> Thanh toán tiền bằng paypal</Radio>
@@ -319,7 +319,7 @@ const PaymentPage = () => {
                       border: 'none',
                       borderRadius: '4px'
                   }}
-                  textbutton={'Đặt hàng'}
+                  textbutton={'Order'}
                   styleTextButton={{ color: '#fff', fontSize: '15px', fontWeight: '700' }}
               ></ButtonComponent>
               )}

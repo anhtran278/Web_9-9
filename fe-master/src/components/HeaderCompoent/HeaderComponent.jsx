@@ -47,17 +47,18 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
   const handleNavigateSignUP = () => {
     navigate('/sign-up');
   };
-   
-  const handleNavigateHome = () => {
-    navigate('/');
-  };
+
 
   const handleLogout = async () => {
-    setLoading(true);
-    await UserService.logoutUser();
-    dispatch(resetUser());
-    setLoading(false);
-  };
+  setLoading(true);
+  await UserService.logoutUser();
+  dispatch(resetUser());
+
+  localStorage.clear(); 
+
+  setLoading(false);
+};
+
 
 
   useEffect(() => {
@@ -74,7 +75,7 @@ const HeaderComponent = ({ isHiddenSearch = false, isHiddenCart = false }) => {
         <WrapperContentPopup onClick={() => handleClickNavigate('admin')}>System Management</WrapperContentPopup>
       )}
       <WrapperContentPopup onClick={() => handleClickNavigate('my-order')}>My Order</WrapperContentPopup>
-      <WrapperContentPopup onClick={handleLogout}  >Log Out</WrapperContentPopup>
+      <WrapperContentPopup onClick={handleLogout} >Log Out</WrapperContentPopup>
     </div>
   );
 

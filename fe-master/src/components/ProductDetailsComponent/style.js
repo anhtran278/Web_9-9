@@ -46,7 +46,7 @@ export const Section1 = styled.section`
     }
     .small-img img{
     width: 30%;
-    margin: 2px 2px;
+    margin: 2px 8px 8px 0px;
     cursor: pointer;
     }
     .bt input{
@@ -97,7 +97,11 @@ export const Section1 = styled.section`
             margin-left: 20px;
         }
         .description_2{
-            display: block
+            display: block;
+            padding-top: 20px;
+        }
+        .small-img{
+            display: none;
         }
     }
     @media screen and (max-width: 379px){
@@ -107,33 +111,8 @@ export const Section1 = styled.section`
         h1{
             display:none;
         }
-    }
-`
-
-export const Section2 = styled.section`
-    width: 48%;
-    margin-top: 50px;
-
-    img{
-    width: 100%;
-    margin-top: 30px;
-    }
-    h1{
-        display:none;
-        font-family: Caslon Bold;
-        font-style: italic;
-        font-size: 28px;
-        font-weight: 100;
-        width: 100%;
-        margin-top: 25px;
-    }
-    @media screen and (max-width: 769px) {
-        width: 60%;
-    }
-    @media screen and (max-width: 379px) {
-        width: 100%;
-        h1{
-            display: block;
+        .description_2{
+            padding-top: 20px;
         }
     }
 `
@@ -154,3 +133,51 @@ export const Section3 = styled.section`
         display:none;
     }
 `
+
+export const Section2 = styled.section`
+    width: 48%;
+    margin-top: 50px;
+
+    img{
+    width: 100%;
+    margin-top: 30px;
+    }
+    h1{
+    display:none;
+    font-family: Caslon Bold;
+    font-style: italic;
+    font-size: 28px;
+    font-weight: 100;
+    width: 100%;
+    margin-top: 25px;
+    }
+    .small-img{
+    display:none;
+    width: 100%;
+    margin-top: 30px;
+    }
+    .small-img img{
+    width: 30%;
+    margin: 2px 8px 8px 0px;
+    cursor: pointer;
+    }
+    @media screen and (max-width: 769px) {
+        width: 60%;
+        padding-left: 10px;
+        .small-img {
+            display: block
+        }
+    }
+    @media screen and (max-width: 379px) {
+        width: 100%;
+        h1{
+            display: block;
+        }
+        img{
+            width: 100%;
+            margin-top: 0px;
+        }
+    }
+`
+
+

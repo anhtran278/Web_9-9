@@ -6,6 +6,11 @@
     import { useDispatch, useSelector } from 'react-redux';
     import { useLocation, useNavigate } from 'react-router-dom';
     import { addOrderProduct } from '../../redux/slides/orderSlide';
+    import pro_1 from '../../assets/images/product_details_5.webp'
+    import pro_2 from '../../assets/images/product_details_2.webp'
+    import pro_3 from '../../assets/images/product_details_3.webp'
+    import pro_4 from '../../assets/images/product_details_1.webp'
+    import pro_5 from '../../assets/images/product_details_4.webp'
     import { convertPrice } from '../../utils';
     import {
     Article,
@@ -79,9 +84,10 @@
         }
     };
 
-    const handleThumbnailClick = (newImage) => {
-        setCurrentImage(newImage);
+    const handleSmallImageClick = (imageURL) => {
+        setCurrentImage(imageURL);
     };
+
 
     const { isLoading, data: productDetails } = useQuery(['product-details', idProduct], () => fetchGetDetailsProduct(idProduct), { enabled: !!idProduct });
 
@@ -127,16 +133,13 @@
                 ></ButtonComponent>
                 {errorLimitOrder && <div style={{ color: 'red' }}>Sold Out</div>}
                 <div className="small-img">
-                {productDetails?.images &&
-                    productDetails.images.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        className="smallimg"
-                        onClick={() => handleThumbnailClick(image)}
-                        alt=""
-                    />
-                    ))}
+                    <div className="small-img">
+                        <img src={pro_1} className="smallimg" onClick={() => handleSmallImageClick(pro_1)} alt="" />
+                        <img src={pro_2} className="smallimg" onClick={() => handleSmallImageClick(pro_2)} alt="" />
+                        <img src={pro_3} className="smallimg" onClick={() => handleSmallImageClick(pro_3)} alt="" />
+                        <img src={pro_4} className="smallimg" onClick={() => handleSmallImageClick(pro_4)} alt="" />
+                        <img src={pro_5} className="smallimg" onClick={() => handleSmallImageClick(pro_5)} alt="" />
+                    </div>
                 </div>
             </div>
             <div className='description_2'>
@@ -148,16 +151,13 @@
             <h1 style={{textTransform: 'uppercase'}}>{productDetails?.name}</h1>
             <img src={currentImage || productDetails?.image} id="mainimg" alt=""/>
             <div className="small-img">
-            {productDetails?.images &&
-                productDetails.images.map((image, index) => (
-                <img
-                    key={index}
-                    src={image}
-                    className={`smallimg ${currentImage === image ? 'active' : ''}`}
-                    onClick={() => handleThumbnailClick(image)}
-                    alt=""
-                />
-                ))}
+                <div className="small-img">
+                    <img src={pro_1} className="smallimg" onClick={() => handleSmallImageClick(pro_1)} alt="" />
+                    <img src={pro_2} className="smallimg" onClick={() => handleSmallImageClick(pro_2)} alt="" />
+                    <img src={pro_3} className="smallimg" onClick={() => handleSmallImageClick(pro_3)} alt="" />
+                    <img src={pro_4} className="smallimg" onClick={() => handleSmallImageClick(pro_4)} alt="" />
+                    <img src={pro_5} className="smallimg" onClick={() => handleSmallImageClick(pro_5)} alt="" />
+                </div>
             </div>
             </Section2>
             

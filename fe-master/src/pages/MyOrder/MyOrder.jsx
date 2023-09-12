@@ -87,8 +87,8 @@ const MyOrderPage = () => {
   return (
     <Loading isLoading={isLoading || isLoadingCancel}>
       <WrapperContainer>
-        <div style={{height: '100%', width: '1270px', margin: '0 auto'}}>
-          <h4>Đơn hàng của tôi</h4>
+        <div style={{height: '100%', width: '1270px', margin: '0 auto' ,paddingBottom:'50px'}}>
+          <h2 style={{marginLeft:'160px', paddingTop:'20px'}}>Đơn hàng của tôi</h2>
           <WrapperListOrder>
             {data?.map((order) => {
               return (

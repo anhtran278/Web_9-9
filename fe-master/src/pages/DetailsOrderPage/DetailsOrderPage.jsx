@@ -33,13 +33,13 @@ const DetailsOrderPage = () => {
   },[data])
 
   return (
-   <Loading isLoading={isLoading}>
-     <div style={{width: '100%', height: '100vh', background: '#f5f5fa'}}>
+  <Loading isLoading={isLoading}>
+    <div style={{width: '100%', height: '100vh', background: '#f5f5fa'}}>
       <div style={{ width: '1270px', margin: '0 auto', height: '1270px'}}>
-        <h4>Chi tiết đơn hàng</h4>
+        <h2>Details Order</h2>
         <WrapperHeaderUser>
           <WrapperInfoUser>
-            <WrapperLabel>Địa chỉ người nhận</WrapperLabel>
+            <WrapperLabel>Adress</WrapperLabel>
             <WrapperContentInfo>
               <div className='name-info'>{data?.shippingAddress?.fullName}</div>
               <div className='address-info'><span>Địa chỉ: </span> {`${data?.shippingAddress?.address} ${data?.shippingAddress?.city}`}</div>
@@ -47,14 +47,14 @@ const DetailsOrderPage = () => {
             </WrapperContentInfo>
           </WrapperInfoUser>
           <WrapperInfoUser>
-            <WrapperLabel>Hình thức giao hàng</WrapperLabel>
+            <WrapperLabel>Delivery method</WrapperLabel>
             <WrapperContentInfo>
               <div className='delivery-info'><span className='name-delivery'>FAST </span>Giao hàng tiết kiệm</div>
               <div className='delivery-fee'><span>Phí giao hàng: </span> {data?.shippingPrice}</div>
             </WrapperContentInfo>
           </WrapperInfoUser>
           <WrapperInfoUser>
-            <WrapperLabel>Hình thức thanh toán</WrapperLabel>
+            <WrapperLabel>Payments</WrapperLabel>
             <WrapperContentInfo>
               <div className='payment-info'>{orderContant.payment[data?.paymentMethod]}</div>
               <div className='status-payment'>{data?.isPaid ? 'Đã thanh toán' : 'Chưa thanh toán'}</div>
@@ -88,7 +88,7 @@ const DetailsOrderPage = () => {
                     whiteSpace:'nowrap',
                     marginLeft: '10px',
                     height: '70px',
-                  }}>Điện thoại</div>
+                  }}></div>
                 </WrapperNameProduct>
                 <WrapperItem>{convertPrice(order?.price)}</WrapperItem>
                 <WrapperItem>{order?.amount}</WrapperItem>
